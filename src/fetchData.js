@@ -14,7 +14,6 @@ export default function fetchData(searchQuery, page = 1, perPage = 40) {
     `${BASE_URL}/?key=${KEY}&image_type=photo&page=${page}&per_page=${perPage}&orientation=horizontal&safesearch=true&q=${searchQuery}`
   )
     .then(resp => {
-      console.log(resp);
       if (!resp.ok) {
         throw new Error(resp.statusText);
       }
